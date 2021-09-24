@@ -4,17 +4,33 @@
   "description": "shoppingEcoAPI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rmdir /s /q dist && mkdir dist",
+    "dev": "npm run clean && nodemon",
+    "build": "npm run clean && babel index.js --out-file ./dist/bundle.js ",
+    "start": "nodemon --exec babel-node ./index.js"
   },
   "author": "@minhlezz",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
     "mongoose": "^6.0.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.12",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }
