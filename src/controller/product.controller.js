@@ -1,8 +1,12 @@
+import errorHandler from '../helpers/dbErrorHandler'
+import Product from '../models/product.model';
 
-const ProductController = {};
+/**Get All Product */
 
-ProductController.getAllProducts = async (req, res) => {
-    console.log('product')
-}
 
-export default ProductController;
+/**Create new Product */
+
+
+
+
+

@@ -5,15 +5,12 @@
 /**package importing */
 import dotenv from 'dotenv';
 import connectDatabase from './src/configs/database';
-import routerAPI from './src/routes/router';
 import config from './src/configs/config';
 import app from './express';
 
 dotenv.config();
 connectDatabase();
 
-// Routes
-app.use('/', routerAPI);
 
 
 // Open Port && Start Local Server

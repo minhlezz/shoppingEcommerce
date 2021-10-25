@@ -12,6 +12,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import compression from 'compression';
+import apiRouter from './src/routes';
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // option extended-true to enable qs library to parse the deep body requests
 
+app.use('/', apiRouter)
 export default app;
 
 

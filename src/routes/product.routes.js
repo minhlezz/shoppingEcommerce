@@ -1,9 +1,12 @@
-import express from "express";
-import productController from "../controller/product.controller";
-
+import express from 'express';
+import authController from '../controller/auth.controller';
+// import productController from '../controller/product.controller';
 
 const productRouter = express.Router();
 
-productRouter.get('/', (req, res) => productController.getAllProducts());
+// productRouter.route('/api/products')
+//     .get(productController.list)
+//     .post(authController.requiredSignin, productController.create)
 
-export default productRouter;
+
+export default productRouter
